@@ -6,7 +6,7 @@
 %% 
 \n              {printf("line ");}  
 ([ ])+          {printf("space ");}  
-\t tc++;        {printf("tab ");}  
+\t              {printf("tab ");}  
 (boolean)       {printf("boolean ");}  
 (break)         {printf("break ");}  
 (double)        {printf("double ");}  
