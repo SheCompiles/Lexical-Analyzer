@@ -11,9 +11,9 @@ stringConstant ["][\s\S]*([^"\\\n]|\\(.|\n))*["]
 %%
 
 int main() {
-	yylex();
+    yylex();
 }
 
 int yywrap() {
-	return 1;
+    return 1;
 }
