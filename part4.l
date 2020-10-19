@@ -7,18 +7,15 @@ hex [0][x|X][0-9A-Fa-f]+
 
 %%
 
-{digit} printf("DIGIT!");
-{hex} printf("HEXADECIMAL!");
+{digit} printf("DIGIT");
+{hex} printf("HEXADECIMAL");
 
 %%
 
 int main() {
-	yylex();
+    yylex();
 }
 
 int yywrap() {
-	return 1;
+    return 1;
 }
-
-
-
