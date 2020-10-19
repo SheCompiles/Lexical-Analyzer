@@ -6,7 +6,7 @@ stringConstant ["][\s\S]*([^"\\\n]|\\(.|\n))*["]
 
 %%
 
-{stringConstant} printf("CORRECT GRONK!");
+{stringConstant} printf("CORRECT!");
 
 %%
 
