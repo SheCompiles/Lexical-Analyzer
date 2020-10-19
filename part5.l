@@ -11,9 +11,9 @@ doubleConstant ([0-9]+\.[0-9]+|[0-9]+\.)([eE][+-]?[0-9]+)?$
 %%
 
 int main() {
-	yylex();
+    yylex();
 }
 
 int yywrap() {
-	return 1;
+    return 1;
 }
