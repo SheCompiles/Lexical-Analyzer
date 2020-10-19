@@ -6,7 +6,7 @@ doubleConstant ([0-9]+\.[0-9]+|[0-9]+\.)([eE][+-]?[0-9]+)?$
 
 %%
 
-{doubleConstant} printf("CORRECT GRONK!");
+{doubleConstant} printf("CORRECT!");
 
 %%
 
