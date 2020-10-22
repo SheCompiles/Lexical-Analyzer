@@ -7,8 +7,8 @@ hex [0][x|X][0-9A-Fa-f]+
 
 %%
 
-{digit} printf("DIGIT");
-{hex} printf("HEXADECIMAL");
+{digit} printf("digit");
+{hex} printf("hexadecimal");
 
 %%
 
