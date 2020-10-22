@@ -6,7 +6,7 @@ stringConstant ["][\s\S]*([^"\\\n]|\\(.|\n))*["]
 
 %%
 
-{stringConstant} printf("STRING CONSTANT");
+{stringConstant} printf("stringconstant");
 
 %%
 
