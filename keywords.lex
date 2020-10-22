@@ -1,7 +1,9 @@
 %{ 
 #include<stdio.h> 
 #include<string.h> 
-%}              
+%}      
+
+/* Parts 1-3 of Project 1 */
    
 %% 
 \n              {printf("line ");}  
