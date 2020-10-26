@@ -1,5 +1,20 @@
 %{ 
-/* full project */
+  #define true 1 
+  #define false 0
+  #define LENGTH(x) (sizeof(x)/sizeof(*(x)))
+  
+  struct {
+    int dispatch[52];
+    char symbol[200];
+    int next[200];
+  } symbol_table;
+
+  void initTable(void);
+  int nextSymbol(char *);
+  void insert(char *);
+  int findEmpty(char *, int);
+  void printSwitch(int *, int);    
+  void printSymbol(char *, int); 
 %}
 
 digit [0-9]+
