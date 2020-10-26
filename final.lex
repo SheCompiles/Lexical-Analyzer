@@ -87,13 +87,20 @@ stringConstant  \"[^"\n]*\"
 
 main(int argc, char* argv[]) {
     
-    FILE *fh;
-
-    if (argc == 2 && (fh = fopen(argv[1], "r")))
-        yyin = fh;
-    yylex();
+    initTable();
+    while(yylex()) {}
     return 0;
 }   
+
+void initTable(void) {
+  int i;
+  for (i = 0; i < 52; i++)
+    symbol_table.dispatch[i] = -1;
+  for (i = 0; i < 200; i++)
+    symbol_table.symbol[i] = '\0';
+  for (i = 0; i < 200; i++)
+    symbol_table.next[i] = -1;
+}
 
 int yywrap() {
     return 1;
