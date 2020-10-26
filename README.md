@@ -5,6 +5,8 @@
 ========================================
 Project 1 Key Components/Specifications:
 (1) Keywords which are also reserved words. They cannot be used as identifiers or redefine (such as boolean, break, println, and while)
-(2) An Identifier 
+(2) An Identifier is a sequence of letters, digits, and underscores, starting with a letter. Toy is case-sensitive - e.g., "if" is a keyword,
+    but "IF" is an identifier; "hello" and "Hello" are two distinct identifiers
+(3) 
 
 How to Run Project 1:
