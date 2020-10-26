@@ -36,6 +36,7 @@ stringConstant  \"[^"\n]*\"
 \t              {printf("tab ");}  
 "boolean"       {printf("boolean ");}  
 "break"         {printf("break ");}  
+"class"         {printf("class ");}  
 "double"        {printf("double ");}  
 "else"          {printf("else ");}  
 "extends"       {printf("extends ");}  
@@ -43,6 +44,7 @@ stringConstant  \"[^"\n]*\"
 "for"           {printf("for ");}  
 "if"            {printf("if ");}  
 "int"           {printf("int ");}  
+"implements"         {printf("implements ");}  
 "interface"     {printf("interface ");}  
 "new"           {printf("new ");}  
 "newarray"      {printf("newarray ");}  
