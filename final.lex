@@ -7,6 +7,12 @@ hex [0][x|X][0-9A-Fa-f]+
 doubleConstant ([0-9]+\.[0-9]+|[0-9]+\.)([eE][+-]?[0-9]+)?$
 stringConstant  \"[^"\n]*\"
 
+struct {
+    int switch[52];
+    char symbol[200];
+    int next[200];
+  } trie_table;
+
 %%
 
 {digit} printf("digit");
