@@ -52,7 +52,7 @@ stringConstant  \"[^"\n]*\"
 "!=" printf("notequal ");
 "&&" printf("and ");
 "||" printf("or ");
-"!" printf("exclamation ");
+"!" printf("not ");
 "<<" printf("rightshift ");
 ">>" printf("leftshift ");  
 ";" printf("semicolon ");
@@ -62,10 +62,12 @@ stringConstant  \"[^"\n]*\"
 ")" printf("rightparen ");
 "[" printf("leftbracket ");
 "]" printf("rightbracket ");
-"{" printf("leftcurly ");
-"}" printf("rightcurly ");
+"{" printf("leftbrace ");
+"}" printf("rightbrace ");
 
+// single-line comment
 "//".* { }
+// multi-line comment
 [/][*][^*]*[*]+([^*/][^*]*[*]+)*[/] { }
 
 %%
