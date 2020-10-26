@@ -7,12 +7,6 @@ hex [0][x|X][0-9A-Fa-f]+
 doubleConstant ([0-9]+\.[0-9]+|[0-9]+\.)([eE][+-]?[0-9]+)?$
 stringConstant  \"[^"\n]*\"
 
-struct {
-    int switch[52];
-    char symbol[200];
-    int next[200];
-  } trie_table;
-
 %%
 
 {digit} printf("digit");
@@ -44,32 +38,32 @@ struct {
 "void"          {printf("void ");}  
 "while"         {printf("while ");}  
 [a-zA-Z]([a-zA-Z0-9])*            {printf("id ");}  
-"+" printf("plus ");
-"-" printf("minus ");
-"*" printf("multiplication ");
-"/" printf("division ");
-"%" printf("mod ");
-"=" printf("assignop ");
-"<" printf("less ");
-"<=" printf("lessequal ");
-">" printf("greater ");
-">=" printf("greaterequal ");
-"==" printf("equal ");
-"!=" printf("notequal ");
-"&&" printf("and ");
-"||" printf("or ");
-"!" printf("not ");
-"<<" printf("rightshift ");
-">>" printf("leftshift ");  
-";" printf("semicolon ");
-"," printf("comma ");
-"." printf("period ");
-"(" printf("leftparen ");
-")" printf("rightparen ");
-"[" printf("leftbracket ");
-"]" printf("rightbracket ");
-"{" printf("leftbrace ");
-"}" printf("rightbrace ");
+"+"             printf("plus ");
+"-"             printf("minus ");
+"*"             printf("multiplication ");
+"/"             printf("division ");
+"%"             printf("mod ");
+"="             printf("assignop ");
+"<"             printf("less ");
+"<="            printf("lessequal ");
+">"             printf("greater ");
+">="            printf("greaterequal ");
+"=="            printf("equal ");
+"!="            printf("notequal ");
+"&&"            printf("and ");
+"||"            printf("or ");
+"!"             printf("not ");
+"<<"            printf("rightshift ");
+">>"            printf("leftshift ");  
+";"             printf("semicolon ");
+","             printf("comma ");
+"."             printf("period ");
+"("             printf("leftparen ");
+")"             printf("rightparen ");
+"["             printf("leftbracket ");
+"]"             printf("rightbracket ");
+"{"             printf("leftbrace ");
+"}"             printf("rightbrace ");
 
 "//".* { } /* single-line comment */
 [/][*][^*]*[*]+([^*/][^*]*[*]+)*[/] { } /* multi-line comment */
@@ -77,6 +71,7 @@ struct {
 %%
 
 main(int argc, char* argv[]) {
+    
     FILE *fh;
 
     if (argc == 2 && (fh = fopen(argv[1], "r")))
