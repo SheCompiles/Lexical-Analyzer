@@ -85,7 +85,7 @@ stringConstant  \"[^"\n]*\"
 
 %%
 
-main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
     
     initTable();
     while(yylex()) {}
@@ -100,6 +100,62 @@ void initTable(void) {
     symbol_table.symbol[i] = '\0';
   for (i = 0; i < 200; i++)
     symbol_table.next[i] = -1;
+}
+
+int nextSymbol (char *s) {
+  int p = s[0];
+  if (p >= 97) return p - 97 + 26; 
+  return p - 65;
+}
+
+void insert (char *s) {
+  int value = nextSymbol(s); 
+  int ptr = symbol_table.dispatch[ value ];
+  
+  if (ptr == -1) {
+    int slot = findEmpty(symbol_table.symbol, LENGTH(symbol_table.symbol));
+    symbol_table.dispatch[value] = slot;    
+    
+    int i = 1;
+    while (i < strlen(s)) 
+      symbol_table.symbol[slot++] = s[i++];
+    symbol_table.symbol[slot] = '@';
+
+  } else { 
+    int exit = false;
+    int i = 1;      
+    int p = ptr;    
+    while (i < strlen(s)) {
+      if (s[i] == symbol_table.symbol[p]) {
+        i++;
+        p++;
+      } else {
+        exit = true; 
+        break;
+      }
+    }
+
+    if (exit == true) {
+      int next;
+      if (symbol_table.next[p] == -1)
+        next = findEmpty(symbol_table.symbol, LENGTH(symbol_table.symbol));
+      else
+        next = symbol_table.next[p];
+          
+      symbol_table.next[p] = next;
+      
+      while (i < strlen(s)) 
+        symbol_table.symbol[next++] = s[i++];
+      symbol_table.symbol[next] = '@';
+    }
+  }
+}
+
+int findEmpty(char *array, int size) {
+  int i; 
+  for (i = 0; i < size; i++) 
+    if (array[i] == '\0') 
+      return i;
 }
 
 int yywrap() {
