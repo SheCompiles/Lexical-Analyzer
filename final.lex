@@ -65,10 +65,8 @@ stringConstant  \"[^"\n]*\"
 "{" printf("leftbrace ");
 "}" printf("rightbrace ");
 
-/* single-line comment */
-"//".* { }
-/* multi-line comment */
-[/][*][^*]*[*]+([^*/][^*]*[*]+)*[/] { }
+"//".* { } /* single-line comment */
+[/][*][^*]*[*]+([^*/][^*]*[*]+)*[/] { } /* multi-line comment */
 
 %%
 
