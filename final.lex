@@ -85,7 +85,16 @@ stringConstant  \"[^"\n]*\"
 
 int main(int argc, char* argv[]) { 
     initTable();
+    
+    printf("\nOutput: ");
     while(yylex()) {}
+    
+    printf("\Switch Table: ");
+    printSwitch(symbol_table.dispatch, LENGTH(symbol_table.switch));
+    
+    printf("\Symbol Table: ");
+    printSymbol(symbol_table.symbol, LENGTH(symbol_table.symbol));
+
     return 0;
 }   
 
@@ -110,6 +119,26 @@ int findEmpty(char *array, int size) {
   for (i = 0; i < size; i++) 
     if (array[i] == '\0') 
       return i;
+}
+
+void printSwitch(int *table, int size) {
+  int i;
+  char letters[52] = { 'A', 'B', 'C', 'D', 'E','F','G','H','I','J','K','L','M','N','O','P','Q', 'R', 'S', 'T', 'U', 'V','W','X','Y','Z', 'a','b','c','d','e','f','g','h', 'i','j','k','l','m','n','o','p','q', 'r','s','t','u','v','w','x','y','z'};
+  printf(" ");
+  for (i = 0; i < 52; i++)
+    printf("%1c  ", letters[i]);
+  printf("\n"); 
+  for (i = 0; i < size; i++) 
+    printf("%1d ", table[i]);
+}
+
+void printSymbol(char *table, int size) {
+  int i; 
+  for (i = 0; i < size; i++) 
+    printf("%1d ", i); 
+  printf("\n");
+  for (i = 0; i < size; i++) 
+    printf("%1c ", table[i]);
 }
 
 int yywrap() {
