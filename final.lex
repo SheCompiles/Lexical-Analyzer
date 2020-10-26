@@ -112,43 +112,6 @@ int findEmpty(char *array, int size) {
       return i;
 }
 
-void insert (char *s) {
-  int val = nextSymbol(s); 
-  int ptr = trieTable.switch[val];
-  if (ptr == -1) {
-    int slot = findEmpty(trieTable.symbol, LENGTH(trieTable.symbol));
-    trieTable.switch[val] = slot;    
-    int i = 1;
-    while (i < strlen(s)) 
-      trieTable.symbol[slot++] = s[i++];
-    trieTable.symbol[slot] = '@';
-  } else { 
-    int exit = false;
-    int i = 1;      
-    int p = ptr;    
-    while (i < strlen(s)) {
-      if (s[i] == trieTable.symbol[p]) {
-        i++;
-        p++;
-      } else {
-        exit = true; 
-        break;
-      }
-    }
-    if (exit == true) {
-      int next;
-      if (trieTable.next[p] == -1)
-        next = findEmpty(trieTable.symbol, LENGTH(trieTable.symbol));
-      else
-        next = trieTable.next[p];       
-      trieTable.next[p] = next;
-      while (i < strlen(s)) 
-        trieTable.symbol[next++] = s[i++];
-      trieTable.symbol[next] = '@';
-    }
-  }
-}
-
 int yywrap() {
     return 1;
 }
