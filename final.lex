@@ -91,7 +91,7 @@ stringConstant  \"[^"\n]*\"
 int main(int argc, char* argv[]) { 
     initTable();
     
-    printf("\nOutput: ");
+    printf("\nOutput: \n");
     while(yylex()) {}
     
     printf("\nSwitch Table: ");
