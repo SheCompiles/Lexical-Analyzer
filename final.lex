@@ -31,7 +31,7 @@ stringConstant  \"[^"\n]*\"
 {hex} printf("hexadecimal ");
 {doubleConstant} printf("doubleconstant ");
 {stringConstant} printf("stringconstant ");
-\n              {printf("line ");}  
+\n              {printf("\n ");}  
 ([ ])+          {printf("space ");}  
 \t              {printf("tab ");}  
 "boolean"       {printf("boolean ");}  
