@@ -7,7 +7,7 @@
   #define LENGTH(x) (sizeof(x)/sizeof(*(x)))
   
   struct {
-    int switch[52];
+    int switchSym[52];
     char symbol[200];
     int next[200];
   } trieTable;
@@ -93,7 +93,7 @@ int main(int argc, char* argv[]) {
     while(yylex()) {}
     
     printf("\nSwitch Table: ");
-    printSwitch(trieTable.switch, LENGTH(trieTable.switch));
+    printSwitch(trieTable.switchSym, LENGTH(trieTable.switchSym));
     
     printf("\nSymbol Table: ");
     printSymbol(trieTable.symbol, LENGTH(trieTable.symbol));
@@ -104,7 +104,7 @@ int main(int argc, char* argv[]) {
 void initTable(void) {
   int i;
   for (i = 0; i < 52; i++)
-    trieTable.switch[i] = -1;
+    trieTable.switchSym[i] = -1;
   for (i = 0; i < 200; i++)
     trieTable.symbol[i] = '\0';
   for (i = 0; i < 200; i++)
