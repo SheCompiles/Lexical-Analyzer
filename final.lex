@@ -92,10 +92,10 @@ int main(int argc, char* argv[]) {
     printf("\nOutput: ");
     while(yylex()) {}
     
-    printf("\Switch Table: ");
+    printf("\nSwitch Table: ");
     printSwitch(trieTable.switch, LENGTH(trieTable.switch));
     
-    printf("\Symbol Table: ");
+    printf("\nSymbol Table: ");
     printSymbol(trieTable.symbol, LENGTH(trieTable.symbol));
 
     return 0;
