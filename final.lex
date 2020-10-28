@@ -27,8 +27,8 @@ stringConstant  \"[^"\n]*\"
 
 %%
 
-{digit} printf("digit ");
-{hex} printf("hexadecimal ");
+{digit} printf("intconstant ");
+{hex} printf("intconstant ");
 {doubleConstant} printf("doubleconstant ");
 {stringConstant} printf("stringconstant ");
 \n              {printf("\n ");}  
