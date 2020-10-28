@@ -30,6 +30,8 @@ stringConstant  \"[^"\n]*\"
 {digit}|{hex} printf("intconstant ");
 {doubleConstant} printf("doubleconstant ");
 {stringConstant} printf("stringconstant ");
+"//"((.)*)\n { } /* single-line comment */
+"/*"(([^*]|(("*"+)[^*/]))*)("*"+)"/"\n { } /* multi-line comment */
 \n              {printf("\n ");}  
 ([ ])+          {printf("space ");}  
 \t              {printf("tab ");}  
@@ -83,8 +85,7 @@ stringConstant  \"[^"\n]*\"
 "]"             printf("rightbracket ");
 "{"             printf("leftbrace ");
 "}"             printf("rightbrace ");
-"//".* { } /* single-line comment */
-[/][*][^*]*[*]+([^*/][^*]*[*]+)*[/] { } /* multi-line comment */
+
 %%
 
 int main(int argc, char* argv[]) { 
