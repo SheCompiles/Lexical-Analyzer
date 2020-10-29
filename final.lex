@@ -1,4 +1,5 @@
 %{ 
+
   #include <stdio.h>
   #include <string.h>
   
@@ -18,22 +19,21 @@
   int findEmpty(char *, int);
   void printSwitch(int *, int);    
   void printSymbol(char *, int); 
+
 %}
 
-digit [0-9]+
-hex [0][x|X][0-9A-Fa-f]+
-doubleConstant ([0-9]+\.[0-9]+|[0-9]+\.)([eE][+-]?[0-9]+)?$
-stringConstant  \"[^"\n]*\"
+hex             [0][x|X][0-9A-Fa-f]+
+digit           [0-9]+
+stringConstant  \"([^\"\n])*\"
+doubleConstant  ([0-9]+\.[0-9]+|[0-9]+\.)([eE][+-]?[0-9]+)?$
+intConstant     {hex}|{digit} 
 
 %%
 
-{digit}|{hex} printf("intconstant ");
-{doubleConstant} printf("doubleconstant ");
-{stringConstant} printf("stringconstant ");
-"//"((.)*)\n { } /* single-line comment */
-"/*"(([^*]|(("*"+)[^*/]))*)("*"+)"/"\n { } /* multi-line comment */
-\n              {printf("\n ");}  
-([ ])+          {printf("space ");}  
+"/*"(([^*]|(("*"+)[^*/]))*)("*"+)"/"\n {; /* multi-line comment */ }
+"//"((.)*)\n                           {; /* single-line comment */ }
+
+\n              {printf("\n ");}   
 \t              {printf("tab ");}  
 "boolean"       {printf("boolean ");}  
 "break"         {printf("break ");}  
@@ -58,7 +58,7 @@ stringConstant  \"[^"\n]*\"
 "true"          {printf("true ");}  
 "void"          {printf("void ");}  
 "while"         {printf("while ");}  
-[a-zA-Z]([a-zA-Z0-9])*            {printf("id ");}  
+[a-zA-Z]([a-zA-Z0-9])*            {printf("id ");} 
 "+"             printf("plus ");
 "-"             printf("minus ");
 "*"             printf("multiplication ");
@@ -85,6 +85,11 @@ stringConstant  \"[^"\n]*\"
 "]"             printf("rightbracket ");
 "{"             printf("leftbrace ");
 "}"             printf("rightbrace ");
+
+{stringConstant}    { printf("stringconstant ");}
+{doubleConstant}    { printf("doubleconstant ");}
+{intConstant}       { printf("intconstant ");}
+.                   {; /* ignore unknown characters */ }
 
 %%
 
