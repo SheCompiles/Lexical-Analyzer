@@ -7,7 +7,7 @@ For this compiler project, we are referencing a Toy programming language. Our gr
 - Yohanna Tesfay
 
 ## Installation
-**Install the software of Flex in a Unix environment!**
+***Install the software of Flex in a Unix environment!***
 ```
 Example for Linux users:
 apt-get install lex 
@@ -18,7 +18,7 @@ brew install flex
 ```
 
 ## Steps to Run & Compile Project 1's Lexical Analyzer
-**Make sure you navigate to the repo folder before running the steps below!**
+***Make sure you navigate to the repo folder before running the steps below!***
 ```
 Steps To Run with toyprogram.toy:
 1. lex final.lex
