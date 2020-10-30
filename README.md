@@ -19,6 +19,7 @@ brew install flex
 ```
 
 ## Steps to Run & Compile Project 1's Lexical Analyzer:
+**Make sure you navigate to the repo folder before running the steps below!**
 ```
 Steps To Run with toyprogram.toy:
 1. lex final.lex
