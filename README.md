@@ -8,6 +8,7 @@ For this compiler project we are referencing a Toy programming language. Our gro
 
 ## Installation
 Install the software of Flex in a Unix environment! <br/>
+
 *Example for Window users:* <br/>
 *Example for Terminal/Mac users (make sure brew is installed):* <br/>
 **brew install flex**
