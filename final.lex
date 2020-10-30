@@ -45,15 +45,14 @@
   
 %}
 
-hex             [0][x|X][0-9A-Fa-f]+
-digit           [0-9]+
-stringConstant  \"[^"\n]*\"
-exponent        ((E|e)("+"|"-")?({digit}*))
-double1         {digit}+"."{digit}?
-double2         {digit}+{exponent}
-doubleConstant  ({double1}{double2})
-intConstant     {hex}|{digit}+{exponent}?
-identifier      [a-zA-Z]([a-zA-Z0-9])*
+hex               [0][xX][0-9A-Fa-f]+
+digit             [0-9]+
+doubleOne         [0-9]+\.[0-9]*([Ee][+-]?[0-9]+)?
+doubleTwo         [0-9]+([Ee][+-]?[0-9]+)? 
+doubleConstant    {doubleOne}|{doubleTwo} 
+intConstant       {hex}|{digit}
+stringConstant    \"[^"\n]*\"  
+identifier        [a-zA-Z]([a-zA-Z0-9])* 
 
 %%
 
@@ -63,12 +62,14 @@ identifier      [a-zA-Z]([a-zA-Z0-9])*
 \n              {printf("\n ");}  
 ([ ])+          {;}  
 \t              {;} 
+
 boolean     { printf("boolean "); insert(yytext); return (_boolean); } 
 break       { printf("break "); insert(yytext); return (_break); }
 class       { printf("class "); insert(yytext); return (_class); } 
 double      { printf("double "); insert(yytext); return (_double); }
 else        { printf("else "); insert(yytext); return (_else); } 
-extends     { printf("extends "); insert(yytext); return (_extends); } 
+extends     { printf("extends "); insert(yytext); return (_extends); }
+false       { printf("booleanconstant "); insert(yytext); return (_booleanconstant); }
 for         { printf("for "); insert(yytext); return (_for); } 
 if          { printf("if "); insert(yytext); return (_if); }
 int         { printf("int "); insert(yytext); return (_int); } 
@@ -80,9 +81,8 @@ println     { printf("println "); insert(yytext); return (_println); }
 readln      { printf("readln "); insert(yytext); return (_readln); }
 return      { printf("return "); insert(yytext); return (_return); }
 string      { printf("string "); insert(yytext); return (_string); }
-this        { printf("this "); insert(yytext); return (_this); } 
-true        { printf("true "); return (_booleanconstant); } 
-false       { printf("false "); return (_booleanconstant); } 
+this        { printf("this "); insert(yytext); return (_this); }
+true        { printf("booleanconstant "); insert(yytext); return (_booleanconstant); } 
 void        { printf("void "); insert(yytext); return (_void); } 
 while       { printf("while "); insert(yytext); return (_while); }
 
@@ -118,6 +118,7 @@ while       { printf("while "); insert(yytext); return (_while); }
 {stringConstant}    { printf("stringconstant ");}
 {identifier}        {printf("id "); insert(yytext); return (_id);}
 .                   {; /* ignore unknown characters */ }
+
 
 %%
 
