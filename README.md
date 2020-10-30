@@ -14,9 +14,9 @@ Install the software of Flex in a Unix environment! <br/>
 **brew install flex**
 
 ## Steps to Run & Compile Project I's Lexical Analyzer:
-1. lex final.lex
-2. cc lex.yy.lc -ll
-3. ./a.out < toyprogram.lex
+> 1. lex final.lex
+> 2. cc lex.yy.lc -ll
+> 3. ./a.out < toyprogram.lex
 
 ## Test Cases for Project I's Lexical Analyzer:
 - toyprogram.lex (test input case provided for project) <br/>
