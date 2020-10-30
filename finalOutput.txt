@@ -1,0 +1,32 @@
+int id leftparen int id rightparen leftbrace 
+if leftparen id greater intconstant rightparen return id multiplication id leftparen id minus intconstant rightparen semicolon 
+else return intconstant semicolon 
+rightbrace 
+void id leftparen rightparen leftbrace 
+int id semicolon 
+int id semicolon 
+println leftparen stringconstant comma id leftparen intconstant rightparen comma stringconstant rightparen semicolon 
+id assignop intconstant semicolon id assignop intconstant semicolon 
+for leftparen semicolon id lessequal intconstant semicolon rightparen leftbrace id assignop id multiplication id semicolon id assignop id plus intconstant semicolon rightbrace 
+println leftparen id id id intconstant not id comma id rightparen semicolon 
+rightbrace 
+class id leftbrace 
+int id semicolon 
+double id semicolon 
+boolean id semicolon 
+string id semicolon 
+int leftbracket rightbracket id semicolon 
+id assignop booleanconstant semicolon 
+id assignop intconstant semicolon id assignop doubleconstant semicolon 
+id assignop id id semicolon 
+while leftparen id assignop leftparen id division intconstant rightparen less intconstant rightparen println leftparen id comma id id not rightparen semicolon 
+id assignop newarray leftparen intconstant comma int rightparen semicolon 
+rightbrace 
+
+Switch Table
+ A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z  
+-1 -1 56 -1 -1 62 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 86 73 51 67 16 3 -1 91 0 -1 -1 -1 24 110 49 33 -1 10 80 28 -1 20 96 7 -1 -1 
+
+Symbol Table
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 
+n t @ a c t @ @ s @ r a t i v e @ s e @ o i d @ a i n @ o t a l @ r i n t l n @ u n @ y @ u l t @ f @ l a s s @ S 4 1 1 0 @ u n n y @ o u b l e @ o o l e a n @ t r i n g @ @ r u e @ e l l o @ o r l d @ h i l e @ a v e @ e w a r r a y @    
