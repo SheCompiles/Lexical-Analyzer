@@ -49,10 +49,10 @@ hex             [0][x|X][0-9A-Fa-f]+
 digit           [0-9]+
 stringConstant  \"[^"\n]*\"
 exponent        ((E|e)("+"|"-")?({digit}*))
-double1         {digit}+"."{digit}+{exponent}?
+double1         {digit}+"."{digit}?
 double2         {digit}+{exponent}
-doubleConstant  ({double1}|{double2})
-intConstant     {hex}|{digit}
+doubleConstant  ({double1}{double2})
+intConstant     {hex}|{digit}+{exponent}?
 identifier      [a-zA-Z]([a-zA-Z0-9])*
 
 %%
