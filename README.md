@@ -7,9 +7,8 @@ For this compiler project, we are referencing a Toy programming language. Our gr
 - Yohanna Tesfay
 
 ## Installation
+**Install the software of Flex in a Unix environment!**
 ```
-Install the software of Flex in a Unix environment!
-
 Example for Linux users:
 apt-get install lex 
 apt-get install bison 
