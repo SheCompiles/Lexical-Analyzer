@@ -10,3 +10,6 @@ Project 1 Key Components/Specifications:
 (3) 
 
 How to Run Project 1:
+1. lex file.lex
+2. cc lex.yy.lc -ll
+3. ./a.out < filename
