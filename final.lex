@@ -147,6 +147,7 @@ int yywrap(void)
     return (1); 
 }
 
+ /* initializing the trie */
 void initTrie(void) {
   int i;
   for (i = 0; i < 52; i++)
@@ -157,12 +158,14 @@ void initTrie(void) {
     trieTable.next[i] = -1;
 }
 
+ /* updates the trie values based on the ascii value of the character */
 int nextSymbol (char *s) {
   int p = s[0];
   if (p >= 97) return p - 97 + 26; 
   return p - 65;
 }
 
+ /* inserting the character of each token and identifier into the trie */
 void insert (char *s) {
   int value = nextSymbol(s); 
   int ptr = trieTable.switchSym[ value ];
@@ -193,7 +196,6 @@ void insert (char *s) {
         break;
       }
     }
-    
     if (exit == true) 
     {
       int next;
@@ -209,6 +211,7 @@ void insert (char *s) {
   }
 }
 
+ /* locates the next empty slot in the symbol table */
 int findEmpty(char *array, int size) {
   int i; 
   for (i = 0; i < size; i++) 
@@ -216,6 +219,7 @@ int findEmpty(char *array, int size) {
       return i;
 }
 
+ /* prints the switch table */
 void printSwitch(int *table, int size) {
   char alphabets[52] = { 'A', 'B', 'C', 'D', 'E', 'F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
   int i;
@@ -227,6 +231,7 @@ void printSwitch(int *table, int size) {
     printf("%1d ", table[i]);
 }
 
+ /* prints the symbol table */
 void printSymbol(char *table, int size) {
   int i; 
   for (i = 0; i < size; i++) 
