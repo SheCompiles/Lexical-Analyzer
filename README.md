@@ -22,7 +22,7 @@ brew install flex
 ```
 1. lex final.lex
 2. cc lex.yy.lc -ll
-3. ./a.out < toyprogram.lex
+3. ./a.out < toyprogram.toy
 ```
 
 ## Test Cases for Project I's Lexical Analyzer:
