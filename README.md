@@ -7,14 +7,16 @@ For this compiler project we are referencing a Toy programming language. Our gro
 - Yohanna Tesfay
 
 ## Installation
-Install the software of Flex in a Unix environment! <br/>
+```
+Install the software of Flex in a Unix environment!
 
-*Example for Linux users:* <br/>
-**apt-get install lex** <br/> 
-**apt-get install bison** <br/>
+Example for Linux users:
+apt-get install lex 
+apt-get install bison 
 
-*Example for Terminal/Mac users (make sure brew is installed):* <br/>
-**brew install flex**
+Example for Terminal/Mac users (make sure brew is installed): 
+brew install flex
+```
 
 ## Steps to Run & Compile Project I's Lexical Analyzer:
 ```
