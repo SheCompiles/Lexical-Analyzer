@@ -17,7 +17,7 @@ Example for Terminal/Mac users (make sure brew is installed):
 brew install flex
 ```
 
-## Steps to Run & Compile Project 1's Lexical Analyzer:
+## Steps to Run & Compile Project 1's Lexical Analyzer
 **Make sure you navigate to the repo folder before running the steps below!**
 ```
 Steps To Run with toyprogram.toy:
@@ -32,7 +32,7 @@ Steps To Run with personalTestCase.toy:
 3. ./a.out < personalTestCase.toy
 ```
 
-## Test Cases for Project 1's Lexical Analyzer:
+## Test Cases for Project 1's Lexical Analyzer
 ```
 Input Test Cases (root folder of the repository)
 - toyprogram.toy 
