@@ -30,6 +30,6 @@ brew install flex
 - toyprogram.toy (test input case provided for project) <br/>
 - personalTestCase.toy <br/>
 
-- (output of toyprogram.lex)
+- finalOutput.txt (output of toyprogram.toy)
 - (output of our own test case)
 ```
