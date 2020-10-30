@@ -119,14 +119,13 @@ while       { printf("while "); insert(yytext); return (_while); }
 {identifier}        {printf("id "); insert(yytext); return (_id);}
 .                   {; /* ignore unknown characters */ }
 
-
 %%
 
 int main(int argc, char *argv[]) {
 
   initTrie();
   
-  printf("\nOutput\n");
+  printf("\n");
   while(yylex()) {}
   
   printf("\n\nSwitch Table\n");
