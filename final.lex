@@ -2,7 +2,7 @@
     #include <stdio.h>
     #include <string.h>
     
-    // token definitions
+    /* token definitions */
     #define _boolean         1
     #define _break           2
     #define _class           3
@@ -30,7 +30,7 @@
     
     #define LENGTH(x) (sizeof(x)/sizeof(*(x)))
   
-  // defining structure of symbol & switch trie table
+  /* defining structure of symbol & switch trie table */
   struct {
     int switchSym[52];
     char symbol[200];
@@ -65,7 +65,7 @@ identifier        [a-zA-Z]([a-zA-Z0-9])*
 ([ ])+          {;}  /* space */
 \t              {;} /* tab */
 
-// keywords
+/* keywords */
 boolean     { printf("boolean "); insert(yytext); return (_boolean); } 
 break       { printf("break "); insert(yytext); return (_break); }
 class       { printf("class "); insert(yytext); return (_class); } 
@@ -89,7 +89,7 @@ true        { printf("booleanconstant "); insert(yytext); return (_booleanconsta
 void        { printf("void "); insert(yytext); return (_void); } 
 while       { printf("while "); insert(yytext); return (_while); }
 
-// operators & punctuation characters
+/* operators & punctuation characters */
 "+"           { printf("plus "); }
 "-"           { printf("minus "); }
 "*"           { printf("multiplication "); }
