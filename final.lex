@@ -37,7 +37,7 @@
 
   int yylval;
   void initTrie(void);
-  int next_symbol(char *);
+  int nextSymbol(char *);
   int findEmpty(char *, int);
   void printSwitch(int *, int);    
   void printSymbol(char *, int);  
@@ -59,9 +59,9 @@ identifier        [a-zA-Z]([a-zA-Z0-9])*
 "/*"(([^*]|(("*"+)[^*/]))*)("*"+)"/"\n {; /* multi-line comment */ }
 "//"((.)*)\n                           {; /* single-line comment */ }
 
-\n              {printf("\n ");}  
-([ ])+          {;}  
-\t              {;} 
+\n              {printf("\n ");}  /* new line */
+([ ])+          {;}  /* space */
+\t              {;} /* tab */
 
 boolean     { printf("boolean "); insert(yytext); return (_boolean); } 
 break       { printf("break "); insert(yytext); return (_break); }
@@ -153,14 +153,14 @@ void initTrie(void) {
     trieTable.next[i] = -1;
 }
 
-int next_symbol (char *s) {
+int nextSymbol (char *s) {
   int p = s[0];
   if (p >= 97) return p - 97 + 26; 
   return p - 65;
 }
 
 void insert (char *s) {
-  int value = next_symbol(s); 
+  int value = nextSymbol(s); 
   int ptr = trieTable.switchSym[ value ];
   if (ptr == -1) {
     int slot = findEmpty(trieTable.symbol, LENGTH(trieTable.symbol));
