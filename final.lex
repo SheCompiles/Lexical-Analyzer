@@ -65,7 +65,7 @@ identifier        [a-zA-Z]([a-zA-Z0-9])*
 ([ ])+          {;}  /* space */
 \t              {;} /* tab */
 
-/* keywords */
+    /* keywords */
 boolean     { printf("boolean "); insert(yytext); return (_boolean); } 
 break       { printf("break "); insert(yytext); return (_break); }
 class       { printf("class "); insert(yytext); return (_class); } 
@@ -89,7 +89,7 @@ true        { printf("booleanconstant "); insert(yytext); return (_booleanconsta
 void        { printf("void "); insert(yytext); return (_void); } 
 while       { printf("while "); insert(yytext); return (_while); }
 
-/* operators & punctuation characters */
+    /* operators & punctuation characters */
 "+"           { printf("plus "); }
 "-"           { printf("minus "); }
 "*"           { printf("multiplication "); }
