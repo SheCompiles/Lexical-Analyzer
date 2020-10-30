@@ -1,0 +1,34 @@
+/* CS4110 Project I Lexical Analyzer
+by Patriz Elaine Daroy, Catherine Gronkiewicz, and Yohanna Tesfay */
+
+// this main method is testing the edge cases of project    
+void main(){
+   string writingCode = "Such an interesting time!";
+   string helloWorld = This string is saying hello ”;
+   int 9, 23.50;
+   int hexOne = 0X12aE;
+   int hexTwo = 0x0;
+   int ifintvoid = 3;
+   boolean thisIsTrue = true;
+   boolean thisIsFalse = false;
+   double validDouble = 0.12;
+   double withEConstant = 12.2E+2;
+   double witheConstant = 15.e+4;
+   double decPoint = 40.;
+   string sOne = “all of these are [amazing] examples!”;
+   println("println is another way to print strings!");
+   int[] newarray = new int[54];
+   int i = 0;
+   while (i < newarray) {
+       println(“inside a while loop”);
+   }
+}
+
+public void swapVal(int a, int b)
+{
+   int temp;
+   temp = a;
+   a = b;
+   b = temp;
+   println(a + " " + b);
+}
