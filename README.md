@@ -12,6 +12,7 @@ Install the software of Flex in a Unix environment! <br/>
 *Example for Linux users:* <br/>
 **apt-get install lex** <br/> 
 **apt-get install bison** <br/>
+
 *Example for Terminal/Mac users (make sure brew is installed):* <br/>
 **brew install flex**
 
