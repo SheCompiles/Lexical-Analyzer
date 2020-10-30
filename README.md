@@ -28,10 +28,10 @@ brew install flex
 ## Test Cases for Project I's Lexical Analyzer:
 ```
 Input Test Cases
-- toyprogram.toy (input test case provided for project)
-- personalTestCase.toy (personal input test case #1 for project)
+- toyprogram.toy (ToyProgramCase Folder)
+- personalTestCase.toy (PersonalTestCase1 Folder)
 
 Outputs
-- finalOutput.txt (output of toyprogram.toy)
-- (output of our own test case)
+- finalOutput.txt (ToyProgramCase Folder)
+- personalTestCaseOutput.txt (PersonalTestCase1 Folder)
 ```
