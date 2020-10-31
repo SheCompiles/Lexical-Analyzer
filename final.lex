@@ -41,9 +41,9 @@
   void initTrie(void);
   int nextSymbol(char *);
   int findEmpty(char *, int);
+  void insert(char *);
   void printSwitch(int *, int);    
   void printSymbol(char *, int);  
-  void insert(char *);
   
 %}
 
