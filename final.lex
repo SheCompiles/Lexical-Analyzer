@@ -153,7 +153,7 @@ void initTrie(void) {
   for (i = 0; i < 52; i++)
     trieTable.switchSym[i] = -1;
   for (i = 0; i < 200; i++)
-    trieTable.symbol[i] = '\0';
+    trieTable.symbol[i] = '\0';         // empty character
   for (i = 0; i < 200; i++)
     trieTable.next[i] = -1;
 }
@@ -161,17 +161,17 @@ void initTrie(void) {
  /* updates the trie values based on the ascii value of the character */
 int nextSymbol (char *s) {
   int p = s[0];
-  if (p >= 97) return p - 97 + 26; 
-  return p - 65;
+  if (p >= 97) return p - 97 + 26;      // value of lower case acii values
+  return p - 65;                        // value of upper case ascii values
 }
 
  /* inserting the character of each token and identifier into the trie */
 void insert (char *s) {
-  int value = nextSymbol(s); 
-  int ptr = trieTable.switchSym[ value ];
+  int val = nextSymbol(s); 
+  int ptr = trieTable.switchSym[val];
   if (ptr == -1) {
     int slot = findEmpty(trieTable.symbol, LENGTH(trieTable.symbol));
-    trieTable.switchSym[value] = slot;    
+    trieTable.switchSym[val] = slot;    
     int i = 1;
     while (i < strlen(s)) 
     {
@@ -206,7 +206,7 @@ void insert (char *s) {
       trieTable.next[p] = next;
       while (i < strlen(s)) 
         trieTable.symbol[next++] = s[i++];
-      trieTable.symbol[next] = '@';
+      trieTable.symbol[next] = '@';         // delimiter indicating end of a token
     }
   }
 }
