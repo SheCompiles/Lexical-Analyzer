@@ -65,7 +65,7 @@ identifier        [a-zA-Z]([a-zA-Z0-9])*
 ([ ])+          {;}  /* space */
 \t              {;} /* tab */
 
- /* keywords */
+ /* keywords and returning the definition to be inserted into the trie */
 boolean     { printf("boolean "); insert(yytext); return (_boolean); } 
 break       { printf("break "); insert(yytext); return (_break); }
 class       { printf("class "); insert(yytext); return (_class); } 
