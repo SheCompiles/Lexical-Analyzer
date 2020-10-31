@@ -199,16 +199,16 @@ void insert (char *s) {
     if (exit == true) 
     {
       int next;
-      if (trieTable.next[p] == -1)
+      if (trieTable.next[p] == -1)  // if next value is empty, we navigate to next empty slot
       {
         next = findEmpty(trieTable.symbol, LENGTH(trieTable.symbol));
       }
-      else
+      else  // otherwise we keep going through the next table until we encounter an empty slot
       {
         next = trieTable.next[p];
       }
       trieTable.next[p] = next;
-      while (i < strlen(s)) 
+      while (i < strlen(s)) // populates the symbol table until we reach the end of the identifier/keyword
       {
         trieTable.symbol[next++] = s[i++];
       }
