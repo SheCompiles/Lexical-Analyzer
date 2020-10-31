@@ -200,12 +200,18 @@ void insert (char *s) {
     {
       int next;
       if (trieTable.next[p] == -1)
+      {
         next = findEmpty(trieTable.symbol, LENGTH(trieTable.symbol));
+      }
       else
+      {
         next = trieTable.next[p];
+      }
       trieTable.next[p] = next;
       while (i < strlen(s)) 
+      {
         trieTable.symbol[next++] = s[i++];
+      }
       trieTable.symbol[next] = '@';         // delimiter indicating end of a token
     }
   }
@@ -215,7 +221,7 @@ void insert (char *s) {
 int findEmpty(char *array, int size) {
   int i; 
   for (i = 0; i < size; i++) 
-    if (array[i] == '\0') 
+    if (array[i] == '\0')   // if the index holds an empty character value then it returns the current empty slot
       return i;
 }
 
@@ -224,19 +230,19 @@ void printSwitch(int *table, int size) {
   char alphabets[52] = { 'A', 'B', 'C', 'D', 'E', 'F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
   int i;
   printf(" ");
-  for (i = 0; i < 52; i++)
+  for (i = 0; i < 52; i++)  // prints out the alphabet as reference
     printf("%1c  ", alphabets[i]);
   printf("\n"); 
-  for (i = 0; i < size; i++) 
+  for (i = 0; i < size; i++) // prints out the results
     printf("%1d ", table[i]);
 }
 
  /* prints the symbol table */
 void printSymbol(char *table, int size) {
   int i; 
-  for (i = 0; i < size; i++) 
+  for (i = 0; i < size; i++)    // prints out the indices
     printf("%1d ", i); 
   printf("\n");
-  for (i = 0; i < size; i++) 
+  for (i = 0; i < size; i++)    // prints out the results
     printf("%1c ", table[i]);
 }
