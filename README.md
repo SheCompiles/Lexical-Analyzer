@@ -52,3 +52,5 @@ Outputs (TestCaseOutputFiles folder)
 ```
 
 ## Design & Implementation Explanations of Project 1
+```
+- Quotes in the program: To ensure that stringconstant can be recognized, ensure that the quote is noted as " and not “
