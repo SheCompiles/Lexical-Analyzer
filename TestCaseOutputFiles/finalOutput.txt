@@ -24,7 +24,7 @@ id assignop newarray leftparen intconstant comma int rightparen semicolon
 rightbrace 
 
 Switch Table
- A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z  
+A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z  
 -1 -1 56 -1 -1 62 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 86 73 51 67 16 3 -1 91 0 -1 -1 -1 24 110 49 33 -1 10 80 28 -1 20 96 7 -1 -1 
 
 Symbol Table
