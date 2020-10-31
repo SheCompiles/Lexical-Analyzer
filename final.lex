@@ -161,30 +161,30 @@ void initTrie(void) {
  /* updates the trie values based on the ascii value of the character */
 int nextSymbol (char *s) {
   int p = s[0];
-  if (p >= 97) return p - 97 + 26;      // value of lower case acii values
-  return p - 65;                        // value of upper case ascii values
+  if (p >= 97) return p - 97 + 26;      // if a lower case letter, grabs the ascii value and subtracts 97 (ascii value of 'a') and adds 26 to get to its respective index
+  return p - 65;                        // if an uppercase letters, grabs the ascii value and subtracts 65 to get to its respective index
 }
 
  /* inserting the character of each token and identifier into the trie */
 void insert (char *s) {
-  int val = nextSymbol(s); 
-  int ptr = trieTable.switchSym[val];
-  if (ptr == -1) {
+  int val = nextSymbol(s);  // val holds the index of the character
+  int ptr = trieTable.switchSym[val];   // ptr points to the index
+  if (ptr == -1) {  // if there is nothing in the ptr then we find the next empty slot
     int slot = findEmpty(trieTable.symbol, LENGTH(trieTable.symbol));
-    trieTable.switchSym[val] = slot;    
+    trieTable.switchSym[val] = slot;    // once we find the empty slot we set the value of the switch table to the next empty slot
     int i = 1;
-    while (i < strlen(s)) 
+    while (i < strlen(s)) // we do the same to iterate through the rest of the identifier into the symbol table
     {
         trieTable.symbol[slot++] = s[i++];
     }
     trieTable.symbol[slot] = '@';
   } 
-  else 
+  else // if the ptr is not empty we check the next table to find the next empty slot
   { 
     int exit = false;
     int i = 1;      
     int p = ptr;   
-    while (i < strlen(s)) {
+    while (i < strlen(s)) { // continue to iterate through the rest of the identifier/keyword
       if (s[i] == trieTable.symbol[p]) 
       {
         i++;
