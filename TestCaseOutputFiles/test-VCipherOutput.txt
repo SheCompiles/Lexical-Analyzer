@@ -1,107 +1,107 @@
 id less id greater 
- id less id greater 
- id less id greater 
- id less string greater 
- id less id greater 
- id less id greater 
- id id id semicolon 
+id less id greater 
+id less id greater 
+id less string greater 
+id less id greater 
+id less id greater 
+id id id semicolon 
  
  
- string id leftparen string id comma string id rightparen leftbrace 
- while leftparen id period id leftparen rightparen less id period id leftparen rightparen rightparen leftbrace 
- for leftparen int id assignop intconstant semicolon id less id period id leftparen rightparen semicolon id plus plus rightparen leftbrace 
- if leftparen id period id leftparen rightparen equal id period id leftparen rightparen rightparen 
- break semicolon 
- id plus assignop leftparen id leftbracket id rightbracket rightparen semicolon 
- rightbrace 
- rightbrace 
- return id semicolon 
- rightbrace 
+string id leftparen string id comma string id rightparen leftbrace 
+while leftparen id period id leftparen rightparen less id period id leftparen rightparen rightparen leftbrace 
+for leftparen int id assignop intconstant semicolon id less id period id leftparen rightparen semicolon id plus plus rightparen leftbrace 
+if leftparen id period id leftparen rightparen equal id period id leftparen rightparen rightparen 
+break semicolon 
+id plus assignop leftparen id leftbracket id rightbracket rightparen semicolon 
+rightbrace 
+rightbrace 
+return id semicolon 
+rightbrace 
  
- int id leftparen string id comma int id rightparen leftbrace 
- id assignop intconstant semicolon for leftparen int id assignop intconstant semicolon id less id period id leftparen rightparen semicolon id plus plus rightparen leftbrace 
- if leftparen id leftparen id leftbracket id rightbracket rightparen rightparen leftbrace 
- id plus plus semicolon 
- rightbrace 
- rightbrace 
- return id semicolon 
- rightbrace 
+int id leftparen string id comma int id rightparen leftbrace 
+id assignop intconstant semicolon for leftparen int id assignop intconstant semicolon id less id period id leftparen rightparen semicolon id plus plus rightparen leftbrace 
+if leftparen id leftparen id leftbracket id rightbracket rightparen rightparen leftbrace 
+id plus plus semicolon 
+rightbrace 
+rightbrace 
+return id semicolon 
+rightbrace 
  
- string id leftparen string id comma string id rightparen leftbrace 
- string id id semicolon 
- for leftparen int id assignop intconstant semicolon id less id period id leftparen rightparen semicolon id plus plus rightparen 
- leftbrace 
- if leftparen id leftbracket id rightbracket equal rightparen leftbrace 
- id leftbracket id rightbracket assignop id semicolon 
- rightbrace 
- id id assignop leftparen id leftbracket id rightbracket plus id leftbracket id rightbracket rightparen mod intconstant semicolon 
+string id leftparen string id comma string id rightparen leftbrace 
+string id id semicolon 
+for leftparen int id assignop intconstant semicolon id less id period id leftparen rightparen semicolon id plus plus rightparen 
+leftbrace 
+if leftparen id leftbracket id rightbracket equal rightparen leftbrace 
+id leftbracket id rightbracket assignop id semicolon 
+rightbrace 
+id id assignop leftparen id leftbracket id rightbracket plus id leftbracket id rightbracket rightparen mod intconstant semicolon 
  
- id plus assignop id semicolon 
+id plus assignop id semicolon 
  
- id id period id id leftparen id rightparen semicolon 
- rightbrace 
- return id id semicolon 
- rightbrace 
+id id period id id leftparen id rightparen semicolon 
+rightbrace 
+return id id semicolon 
+rightbrace 
  
- string id leftparen string id comma string id rightparen leftbrace 
- string id semicolon 
+string id leftparen string id comma string id rightparen leftbrace 
+string id semicolon 
  
- for leftparen int id assignop intconstant semicolon id less id period id leftparen rightparen semicolon id plus plus rightparen 
- leftbrace 
- id id assignop leftparen id leftbracket id rightbracket minus id leftbracket id rightbracket plus intconstant rightparen mod intconstant semicolon 
+for leftparen int id assignop intconstant semicolon id less id period id leftparen rightparen semicolon id plus plus rightparen 
+leftbrace 
+id id assignop leftparen id leftbracket id rightbracket minus id leftbracket id rightbracket plus intconstant rightparen mod intconstant semicolon 
  
- id plus assignop id semicolon 
- id period id id leftparen id rightparen semicolon 
- rightbrace 
- return id semicolon 
- rightbrace 
+id plus assignop id semicolon 
+id period id id leftparen id rightparen semicolon 
+rightbrace 
+return id semicolon 
+rightbrace 
  
- string id leftparen string id comma int id comma int id leftbracket rightbracket rightparen leftbrace 
- int id semicolon 
- for leftparen int id assignop intconstant semicolon id less id semicolon id plus plus rightparen leftbrace 
- id assignop id leftbracket id rightbracket semicolon 
- id leftbracket id rightbracket assignop semicolon 
- rightbrace 
- return id semicolon 
- rightbrace 
+string id leftparen string id comma int id comma int id leftbracket rightbracket rightparen leftbrace 
+int id semicolon 
+for leftparen int id assignop intconstant semicolon id less id semicolon id plus plus rightparen leftbrace 
+id assignop id leftbracket id rightbracket semicolon 
+id leftbracket id rightbracket assignop semicolon 
+rightbrace 
+return id semicolon 
+rightbrace 
  
- int id leftparen rightparen leftbrace 
+int id leftparen rightparen leftbrace 
  
- string id semicolon 
- string id semicolon 
+string id semicolon 
+string id semicolon 
  
- id rightshift stringconstant semicolon 
- id leftparen id comma id rightparen semicolon 
- id rightshift stringconstant semicolon 
- id leftparen id comma id rightparen semicolon 
+id rightshift stringconstant semicolon 
+id leftparen id comma id rightparen semicolon 
+id rightshift stringconstant semicolon 
+id leftparen id comma id rightparen semicolon 
  
- int id semicolon 
- int id assignop id leftparen id comma id rightparen semicolon 
- int id leftbracket id rightbracket semicolon 
- id id semicolon 
- int id semicolon 
- for leftparen int id assignop intconstant semicolon id less id period id leftparen rightparen semicolon id plus plus rightparen leftbrace 
- id assignop id leftbracket id rightbracket semicolon 
- if leftparen id leftparen id rightparen rightparen leftbrace 
- id leftbracket id rightbracket assignop id semicolon 
- id plus plus semicolon 
- rightbrace 
- rightbrace 
+int id semicolon 
+int id assignop id leftparen id comma id rightparen semicolon 
+int id leftbracket id rightbracket semicolon 
+id id semicolon 
+int id semicolon 
+for leftparen int id assignop intconstant semicolon id less id period id leftparen rightparen semicolon id plus plus rightparen leftbrace 
+id assignop id leftbracket id rightbracket semicolon 
+if leftparen id leftparen id rightparen rightparen leftbrace 
+id leftbracket id rightbracket assignop id semicolon 
+id plus plus semicolon 
+rightbrace 
+rightbrace 
  
- string id assignop id leftparen id comma id rightparen semicolon 
- id rightshift stringconstant rightshift id rightshift stringconstant semicolon 
- id rightshift stringconstant rightshift id rightshift id semicolon 
- string id assignop id leftparen id comma id rightparen semicolon 
- id rightshift stringconstant rightshift id rightshift stringconstant semicolon 
- string id assignop id leftparen id comma id rightparen semicolon 
- string id assignop id leftparen id comma id comma id rightparen semicolon 
- id rightshift stringconstant rightshift id rightshift stringconstant semicolon 
+string id assignop id leftparen id comma id rightparen semicolon 
+id rightshift stringconstant rightshift id rightshift stringconstant semicolon 
+id rightshift stringconstant rightshift id rightshift id semicolon 
+string id assignop id leftparen id comma id rightparen semicolon 
+id rightshift stringconstant rightshift id rightshift stringconstant semicolon 
+string id assignop id leftparen id comma id rightparen semicolon 
+string id assignop id leftparen id comma id comma id rightparen semicolon 
+id rightshift stringconstant rightshift id rightshift stringconstant semicolon 
  
  
- rightbrace 
+rightbrace 
 
 Switch Table
- A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z  
+A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z  
 120 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 35 90 22 141 -1 85 148 -1 0 155 64 79 144 55 -1 121 -1 95 15 70 50 109 74 119 143 -1 
 
 Symbol Table
