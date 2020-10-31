@@ -31,14 +31,22 @@ Steps To Run with personalTestCase.toy:
 2. cc lex.yy.lc -ll
 3. ./a.out < personalTestCase.toy
 ```
+```
+Steps To Run with test-VCipher.cpp:
+1. lex final.lex
+2. cc lex.yy.lc -ll
+3. ./a.out < test-VCipher.cpp
+```
 
 ## Test Cases for Project 1's Lexical Analyzer
 ```
 Input Test Cases (root folder of the repository)
 - toyprogram.toy 
 - personalTestCase.toy 
+- test-VCipher.cpp
 
 Outputs (TestCaseOutputFiles folder)
 - finalOutput.txt 
 - personalTestCaseOutput.txt 
+- test-VCipherOutput.txt
 ```
