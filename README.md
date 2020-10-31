@@ -50,3 +50,5 @@ Outputs (TestCaseOutputFiles folder)
 - personalTestCaseOutput.txt 
 - test-VCipherOutput.txt
 ```
+
+## Design & Implementation Explanations of Project 1
