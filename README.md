@@ -56,7 +56,6 @@ Outputs (TestCaseOutputFiles folder)
 - Initally, our group split each of the nine tasks of the project among the three of us - once completed, we pushed all the tasks and ran it together for testing/compiling
 - Quotes in the program: To ensure that stringconstant can be recognized, ensure that the quote is noted as " and not “
 - Trie table: We picked '200' as our maxtransition value to ensure we can yield a large enough array to hold all keywords and identifiers
-
--doubleConstant and intConstant:
-  - these tokens were modified to allow and differentiate between exponents for doubles and ints.
+- doubleConstant and intConstant:
+  - these tokens were modified to allow and differentiate between exponents for double's and int's
 ```
