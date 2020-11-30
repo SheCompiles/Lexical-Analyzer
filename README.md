@@ -28,13 +28,13 @@ Steps To Run with toyprogram.toy:
 ```
 Steps To Run with personalTestCase.toy:
 1. lex final.lex
-2. cc lex.yy.lc -ll
+2. cc lex.yy.c -ll
 3. ./a.out < personalTestCase.toy
 ```
 ```
 Steps To Run with test-VCipher.cpp:
 1. lex final.lex
-2. cc lex.yy.lc -ll
+2. cc lex.yy.c -ll
 3. ./a.out < test-VCipher.cpp
 ```
 
