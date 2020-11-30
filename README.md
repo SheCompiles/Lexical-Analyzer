@@ -22,7 +22,7 @@ brew install flex
 ```
 Steps To Run with toyprogram.toy:
 1. lex final.lex
-2. cc lex.yy.lc -ll
+2. cc lex.yy.c -ll
 3. ./a.out < toyprogram.toy
 ```
 ```
